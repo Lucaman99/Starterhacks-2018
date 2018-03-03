@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<title>Dunno</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" rel="stylesheet">
+
+	<script>
+    function HealthHistory() 
+    {
+
+    console.log('HealthHistory button pressed')
+    httpGetAsync('/healthhistory',handleTSNEResponse)
+	}
+	function HealthTraking() 
+	{
+
+    console.log('HealthTraking button pressed')
+    httpGetAsync('/healthtraking',handleTSNEResponse)
+}
+</script>
+
+
+</head>
+
+<body>
+	<div class="row">
+		<div class = "col-md-3" style="background-color: #000">
+		<br><br><br><br>
+			<button type="submit" class="col-sm-offset-1 btn btn-success"  onclick="HealthHistory()">Health History</button>
+
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		</div>
+
+	</div>
+
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js" rel="stylesheet"></script>
+
+</body>
