@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sharing Dashboard</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class= "scroll1">
+    <div class= "personal">
+      <div class= "container">
+        <h2>Personal Data</h2>
+        <input type="text" id="ty" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;<button type="button" onclick="gh()">Submit</button>
+        <h2>OR</h2>
+        <button type="button" onclick="ga()">Generate a New Key</button>
+      </div>
+    </div>
+    <div class= "personal">
+      <div class= "container">
+        <h2>Health Data (Since March 4, 2018):</h2>
+        <div class="form-group">
+          <li>Day #:</li>
+          <input type="text" id="t" name="timestamp" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="0s">0</p>
+          <li>Weight:</li>
+          <input type="text" id="ta" name="weight" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="1s">0</p>
+          <li>Amount of calories consumed:</li>
+          <input type="text" id="tb" name="calories_consumed" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="2s">0</p>
+          <li>Amount of calories burned through excersize:</li>
+          <input type="text" id="tc" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="3s">0</p>
+          <li>Amount of sugar Consumed:</li>
+          <input type="text" id="td" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="4s">0</p>
+          <li>Amount of cabohydrate Consumed:</li>
+          <input type="text" id="te" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="5s">0</p>
+          <li>Amount of fat Consumed:</li>
+          <input type="text" id="tf" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="6s">0</p>
+          <li>Amount of vitamin Consumed:</li>
+          <input type="text" id="tg" name="lktext" placeholder="Enter in Your Key Here" size="40">&nbsp;&nbsp;
+          <p id="7s">0</p>
+          <button type="button" onclick="go()">Submit</button>
+        </div>
+        <!-- TODO: make it more dynamic?? -->
+        <img id="plot" src="static/output/output0.png" style= "object-fit:cover" height="100%" width="100%" >
+        <img id="plot" src="static/output/output2.png" style= "object-fit:cover" height="100%" width="100%" >
+        <img id="plot" src="static/output/output3.png" style= "object-fit:cover" height="100%" width="100%" >
+
+
+      </div>
+    </div>
+  </div>
+  <div class= "scroll1">
+    <div class= "input" id="jk">
+      <div class= "container">
+        <div class= "close" onclick="this.parentNode.parentNode.style.display = 'none';" style="margin-top:-10px;"><i class="material-icons">clear</i></div>
+        <h2 id="one"></h2>
+        <br><br>
+        Title: <input type="text" name="title" id="nb1" placeholder="Enter a Title" size="40">
+        <br><br>
+        Message:<br><br>
+        <textarea rows="10" cols="70" id="nb2" name="texta" placeholder="Enter a Message"></textarea>
+        <br><br>
+        <button type="button" id="bu" name="button" onclick="j()">Submit</button>
+      </div>
+    </div>
+    <div class= "nav">
+      <div class= "container">
+        <div class= "card" onclick="a()">
+          Workout Regiment: &nbsp;<i class="material-icons" style="font-size:20px">directions_run</i>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class= "card" onclick="b()">
+          Recipe or Diet Plan: &nbsp;<i class="material-icons" style="font-size:20px">restaurant</i>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class= "card" onclick="c()">
+          Other Health Advice:&nbsp; <i class="material-icons" style="font-size:20px">tag_faces</i>
+        </div>
+      </div>
+    </div>
+    <div class= "nav2" id="n2">
+      <div class= "close" onclick="this.parentNode.style.display = 'none';"><i class="material-icons">clear</i></div>
+      <h2>Welcome to (Insert Title)</h2>
+      <p>Welcome to (Insert Title), the first sharing platform for health and fitness data. Here, people can share diets, recipes,
+        workout regiments, and other health advice, which people can then attempt to follow. Data will then be collected regarding this person's
+        health condition as they partake in these healthy measures, and it can be determined if they actually are effective. Personally, people can also track
+        their fat, sugar, carbs, etc., in order to set personal goals for themselves.<br><br>We hope that you will find this platform of use in your journey to become a healthier
+        individual.</p>
+      </div>
+      <div class= "top" id="to">
+      </div>
+    </div>
+  </body>
+  <style>
+    .card {
+      height:40px;
+      width:200px;
+      border-radius:20px;
+      display:inline;
+      border:solid 2px;
+      padding-right:23px;
+      padding-left:5px;
+      padding-top:5px;
+      padding-bottom:5px;
+      cursor:pointer;
+      animation-name:hover;
+      animation-duration:2s;
+      margin-left:14px;
+    }
+    .card i {
+      position:absolute;
+    }
+    .nav {
+      height:50px;
+      width:700px;
+      border:solid 2px;
+      padding-top:30px;
+      margin-top:30px;
+      background-color:white;
+      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    }
+    .nav2 {
+      width:660px;
+      border:solid 2px;
+      padding-left:20px;
+      background-color:white;
+      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+      margin-top:30px;
+      padding-right:20px;
+    }
+    .input {
+      height:400px;
+      width:682px;
+      border:solid 2px;
+      text-align:left;
+      font-family:Helvetica;
+      padding-left:20px;
+      background-color:white;
+      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+      display:none;
+    }
+    .input input {
+      font-size:12px;
+      outline:none;
+    }
+    .input textarea {
+      font-size:12px;
+      outline:none;
+    }
+    button {
+      font-size:14px;
+    }
+    .close {
+      position:absolute;
+      margin-top:10px;
+      margin-left:650px;
+      cursor:pointer;
+    }
+    body {
+      background-image:url('pic.jpg');
+      background-size:1500px 1000px;
+      font-family:Helvetica;
+    }
+    .personal {
+      padding-left:20px;
+      padding-right:20px;
+      padding-top:5px;
+      padding-bottom:15px;
+      width:660px;
+      background-color:white;
+      border:solid 2px;
+      float:right;
+      margin-left:715px;
+      margin-top:28px;
+    }
+    .scroll1 {
+      position:absolute;
+      height:840px;
+      overflow:scroll;
+    }
+    .personal p {
+    }
+    .bar {
+      width:1441px;
+      height:50px;
+      background-color:black;
+      margin-top:-19px;
+      margin-left:-9px;
+    }
+    #ty {
+      font-size:12px;
+      outline:none;
+    }
+  </style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io()
+    var category = []
+    socket.on('starteventa', function (data) {
+      confirm("Ping")
+    })
+    socket.emit('startevent2', 'get_data')
+    socket.on('startevent3', function (data) {
+      console.log("pong")
+      for (var i = 0; i < data.length; i++) {
+        var sqlone = data[i].title
+        var sqltwo = data[i].body
+        var t = document.createElement('DIV')
+        t.className = "nav2";
+        var h = document.createElement('H2')
+        var p = document.createElement('P')
+        var text2 = document.createTextNode(sqltwo)
+        p.appendChild(text2)
+        var text = document.createTextNode(sqlone)
+        h.appendChild(text)
+        var h4 = document.createElement('h4')
+        var text3 = document.createTextNode('By: Anonymous Author')
+        h4.appendChild(text3)
+        t.appendChild(h)
+        t.appendChild(h4)
+        t.appendChild(p)
+        document.getElementById('to').insertBefore(t, document.getElementById('to').childNodes[0])
+      }
+    })
+    function j() {
+      var input1 = document.getElementById('nb1').value+" - "+category[category.length - 1]
+      var input2 = document.getElementById('nb2').value
+      socket.emit('startevent1', [input1, input2])
+      var t = document.createElement('DIV')
+      t.className = "nav2";
+      var h = document.createElement('H2')
+      var p = document.createElement('P')
+      var text2 = document.createTextNode(input2)
+      p.appendChild(text2)
+      var text = document.createTextNode(input1)
+      h.appendChild(text)
+      var h4 = document.createElement('h4')
+      var text3 = document.createTextNode('By: Anonymous Author')
+      h4.appendChild(text3)
+      t.appendChild(h)
+      t.appendChild(h4)
+      t.appendChild(p)
+      document.getElementById('to').insertBefore(t, document.getElementById('to').childNodes[0])
+      document.getElementsByClassName('nav2')[0].scrollIntoView();
+      document.getElementById('jk').style.display = "none"
+      document.getElementById('nb1').value = ""
+      document.getElementById('nb2').value = ""
+    }
+    function go() {
+      document.getElementById('0s').textContent = document.getElementById('t').value
+      document.getElementById('1s').textContent = document.getElementById('ta').value
+      confirm((parseInt(document.getElementById('2s').textContent) + parseInt(document.getElementById('tb').value)).toString())
+      document.getElementById('2s').textContent = (parseInt(document.getElementById('2s').textContent) + parseInt(document.getElementById('tb').value)).toString()
+      document.getElementById('3s').textContent = (parseInt(document.getElementById('3s').textContent) + parseInt(document.getElementById('tc').value)).toString()
+      document.getElementById('4s').textContent = (parseInt(document.getElementById('4s').textContent) + parseInt(document.getElementById('td').value)).toString()
+      document.getElementById('5s').textContent = (parseInt(document.getElementById('5s').textContent) + parseInt(document.getElementById('te').value)).toString()
+      document.getElementById('6s').textContent = (parseInt(document.getElementById('6s').textContent) + parseInt(document.getElementById('tf').value)).toString()
+      document.getElementById('7s').textContent = (parseInt(document.getElementById('7s').textContent) + parseInt(document.getElementById('tg').value)).toString()
+    }
+    function a() {
+      document.getElementById('jk').style.display = "block"
+      document.getElementById('one').innerHTML = "Post: Workout Regiment"
+      category.push("Workout Regiment")
+    }
+    function b() {
+      document.getElementById('jk').style.display = "block"
+      document.getElementById('one').innerHTML = "Post: Recipe or Diet Plan"
+      category.push("Recipe or Diet Plan")
+    }
+    function c() {
+      document.getElementById('jk').style.display = "block"
+      document.getElementById('one').innerHTML = "Post: Other Health Advice"
+      category.push("Health Advice")
+    }
+    function ga() {
+      var mathematics = Math.floor((Math.random()*100000) + 1)
+      socket.emit('sends', mathematics)
+    }
+    $(document).ready(function () {
+      $(".card").mouseenter(function () {
+        $(this).find("i").css("color", "#536A7A")
+        $(this).css("box-shadow", "0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4)")
+      })
+      $(".card").mouseleave(function () {
+        $(this).find("i").css("color", "black")
+        $(this).css("box-shadow", "none")
+      })
+    })
+  </script>
+  </html>
