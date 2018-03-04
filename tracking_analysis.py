@@ -5,20 +5,24 @@ from IPython import embed
 from matplotlib import pyplot as plt
 import numpy as np
 
-def graph(x_values, y_values) :
+def graph(x_values, y_values, a) :
+	#needs debug
 	plt.plot(x_values, y_values, 'ro')
-	maxx=x_values[0];
+	maxx=x_values[0]
 	for x in x_values: 
 		if x > maxx:
 			maxx=x
 	
-	maxy=y_values[0];
+	maxy=y_values[0]
 	for x in y_values: 
 		if x > maxy:
 			maxy=x
 	
 	plt.axis([0, 1.2*maxx, 0, 1.2*maxy])
-	plt.show()
+	save_location = 'static/output/output%d.png' % a
+	# plt.show()
+  	plt.savefig(save_location)
+  	print('Saved image to %s' % save_location)
 
 
 # Connect to the database
@@ -58,7 +62,7 @@ for x in range (column_number):
 		x_axis.append(entire_int_table[a][index])
 	for a in range (row_number):
 		y_axis.append( entire_int_table[a][x])
-	graph (x_axis, y_axis)
+	graph (x_axis, y_axis, x)
 
 cur.close()
 conn.close()
