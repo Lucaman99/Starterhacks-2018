@@ -5,7 +5,7 @@ from IPython import embed
 from matplotlib import pyplot as plt
 import numpy as np
 
-def graph(x_values, y_values, a) :
+def graph(x_values, y_values, a, x_label, y_label) :
 	#needs debug
 	plt.plot(x_values, y_values, 'ro')
 	maxx=x_values[0]
@@ -20,8 +20,11 @@ def graph(x_values, y_values, a) :
 	
 	plt.axis([0, 1.2*maxx, 0, 1.2*maxy])
 	save_location = 'static/output/output%d.png' % a
+	plt.suptitle(y_label+" vs "+x_label+" graph")
+	plt.xlabel(x_label)
+	plt.ylabel(y_label)
   	plt.savefig(save_location)
-  	plt.show()
+  	plt.show() #this clears the canvas
   	print('Saved image to %s' % save_location)
 
 
@@ -62,7 +65,7 @@ for x in range (column_number):
 		x_axis.append(entire_int_table[a][index])
 	for a in range (row_number):
 		y_axis.append( entire_int_table[a][x])
-	graph (x_axis, y_axis, x)
+	graph (x_axis, y_axis, x, columns[0][index], columns[0][x])
 
 cur.close()
 conn.close()
