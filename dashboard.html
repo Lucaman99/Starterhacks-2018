@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>Dunno</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    // document.getElementById("myButton").onclick = function () {
+    //     location.href = "www.yoursite.com";
+    function LabelTranslate() 
+    {
+    // do ajax request to ask for what the location of the TSNE image is. Then use in in the following line.
+    console.log('LabelTranslate button pressed')
+    httpGetAsync('/label-translate',handleTSNEResponse)
+    }
+    function HealthTraking() 
+    {
+    // do ajax request to ask for what the location of the TSNE image is. Then use in in the following line.
+    console.log('HealthTraking button pressed')
+    httpGetAsync('/health-traking',handleTSNEResponse)
+    }
+
+  </script>
+
+
+
+  <style>
+  body{
+      /*setting black and white divider*/
+      color:#fff;
+      background: linear-gradient( to right, black 50%, white 50%); 
+    }
+  </style>
+</head>
+
+<body>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" class="btn btn-success"  onclick= "setVisible()" onclick= "checkFolder()" onclick="generateTSNE()">Generate t-SNE</button>
+          </div>
+        </div>
+
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js" rel="stylesheet"></script>
+  
+</body>
