@@ -20,8 +20,8 @@ def graph(x_values, y_values, a) :
 	
 	plt.axis([0, 1.2*maxx, 0, 1.2*maxy])
 	save_location = 'static/output/output%d.png' % a
-	# plt.show()
   	plt.savefig(save_location)
+  	plt.show()
   	print('Saved image to %s' % save_location)
 
 
